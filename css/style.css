@@ -1,0 +1,154 @@
+/*import other CSS files*/
+
+@import "style_foot_head.css";
+@import "subscribe.css";
+@import "flipcard.css";
+
+html {
+    color: rgb(58, 56, 56);
+    font-family: verdana;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    padding-top: 60px;
+    padding-bottom: 15px;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+}
+
+.active{
+    color: rgb(13, 197, 188);
+    background-color: rgb(35, 50, 60);
+}
+
+.inherit{
+    
+    height: inherit;
+}
+
+article {
+    min-height: 100%;
+}
+
+.box {
+    border: solid red 0px;
+}
+
+.box1 {
+    border: solid red 1px;
+}
+
+.box2 {
+    border: solid blue 1px;
+}
+
+.title_link {
+    color: white;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.content {
+    grid-area: main;
+    display: grid;
+    column-gap: 1px;
+}
+
+
+.link_preview {
+    display: grid;
+    grid-template-columns: 90px 180px;
+    grid-template-rows: 90px;
+    grid-template-areas:
+        "a b";
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.link {
+    display: flex;
+    font-size: large;
+    grid-area: b;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    border-radius: 6px;
+}
+
+.pic {
+    border: 2px solid black;
+    grid-area: a;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%
+}
+
+
+/*abhänging von Screensize*/
+.container {
+    display: grid;
+    grid-template-columns: 320px auto;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "sidebar main";
+}
+
+.content-item {
+    display: flex;
+    padding: 0 0 0 0;
+}
+
+.fig_r40 {
+    width: 40%;
+}
+
+.fig_l60 {
+    width: 60%;
+}
+
+.fig_r60 {
+    width: 60%;
+}
+
+.fig_l40 {
+    width: 40%;
+}
+
+
+@media (max-width:900px) {
+    .container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "sidebar"
+            "main";
+    }
+    
+    .content-item {
+        display: grid;
+        padding: 0 0 0 0;
+    }
+    .fig_r40 {
+        width: 80%;
+    }
+    
+    .fig_l60 {
+        width: 80%;
+    }
+    
+    .fig_r60 {
+        width: 80%;
+    }
+    
+    .fig_l40 {
+        width: 80%;
+    }
+
+}

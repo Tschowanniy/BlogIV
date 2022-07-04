@@ -1,0 +1,151 @@
+/*I'd like to have a fixed header and footer at all times, when scrolling on large and small screens*/
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+    justify-content: left;
+    align-content: center;
+}
+
+.fixed_header,
+.fixed_footer {
+    width: 100%;
+    position: fixed;
+    background: rgb(30, 56, 65);
+    color: #fff;
+}
+
+.fixed_header {
+    top: 0;
+    left: 0;
+    height: 75px;
+}
+
+.fixed_footer {
+    bottom: 0;
+    left: 0;
+    height: 30px;
+    display: flex;
+
+}
+
+.navbar_ulist{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: inherit;
+    overflow: hidden;
+}
+
+.sctn{
+    background-color: transparent;
+    height: inherit;
+    display: inline;
+    float: left;
+    margin: 0;
+    padding: 25px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.sctn:hover{
+    color:rgb(4, 156, 144);
+    transition: 0.5s;
+}
+.nav_bar_div{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: inherit;
+    display: table;
+    margin: 0 auto;
+}
+
+@media (min-width:901px) {
+    .sidepanel {
+        display: none;
+    }
+    .sidepanel a {
+        display: none;
+    }
+    .navbutton{
+        display: none;
+    }
+}
+
+@media (max-width:900px) {
+    
+.nav_bar_div{
+    display: none;
+}    
+
+.navbutton{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: inherit;
+}
+/* The sidepanel menu */
+.sidepanel {
+    height: 250px; /* Specify a height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background: rgb(30, 56, 65);
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 50px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+  }
+  
+  /* The sidepanel links */
+  .sidepanel a {
+    padding: 8px 0px 0px 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidepanel a:hover {
+    color:rgb(4, 156, 144);
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    
+  }
+  
+  /* Style the button that is used to open the sidepanel */
+  .openbtn {
+    font-size: 25px;
+    width: 60px;
+    cursor: pointer;
+    background: rgb(30, 56, 65);
+    color: white;
+    border: none;
+    height: inherit;
+}
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  .sctn{
+    left:0;
+    width: 150px;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+}
